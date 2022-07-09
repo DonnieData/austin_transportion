@@ -1,11 +1,14 @@
-class getData(apiURL:String) {
 
+class getData(inputURL:String) {      //input will be url or "q" to quit
 
-  def executeRequet()={
+  //method for api get request
+  def executeRequest()={
 
-    val r = requests.get(apiURL)
+    val r = requests.get(inputURL)
     if (r.statusCode == 200)
       println("Request Successful")
+    else if (inputURL == "q")
+      System.out.println("Exiting Program")
     else
       println("Request Failed: Please try again")
   }
@@ -14,10 +17,15 @@ class getData(apiURL:String) {
 
 object Main{
   def main(args: Array[String]) = {
-    println("Input URL for request")
-    var obj = new getData(scala.io.StdIn.readLine()) // read in user input as string
 
-    obj.executeRequet()
+    var appControl = "run"
+    while ( appControl == "run") {
+
+      println("Input URL for request")
+      var obj = new getData(scala.io.StdIn.readLine()) // read in user input as string
+      obj.executeRequest()
+
+    }
   }
 }
 
