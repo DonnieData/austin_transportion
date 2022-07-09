@@ -1,14 +1,33 @@
+class getData(apiURL:String) {
 
-object Main extends App {
-  val r = requests.get("https://data.austintexas.gov/resource/dx9v-zd7x.json?$limit=5") //data is in json format
-  println(r.statusCode) // ensure api succesful
-  println("--")
-  //println(r.headers)
-  //println("--")
-  val data = ujson.read(r.text) // use ujson to read in returned data as actual json object
-  println(data(0))
-  //println(r.text)
 
+  def executeRequet()={
+
+    val r = requests.get(apiURL)
+    if (r.statusCode == 200)
+      println("Request Successful")
+    else
+      println("Request Failed: Please try again")
+  }
 
 }
+
+object Main{
+  def main(args: Array[String]) = {
+    println("Input URL for request")
+    var obj = new getData(scala.io.StdIn.readLine()) // read in user input as string
+
+    obj.executeRequet()
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
