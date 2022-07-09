@@ -1,2 +1,2 @@
-# austin_transportion
-Scala project working with public city of Austin dat avia rest API 
+# Scala Austin API application 
+Scala project working with public city of Austin data avia rest API 
