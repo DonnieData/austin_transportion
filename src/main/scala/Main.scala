@@ -1,10 +1,11 @@
 //class for api get request
 class getInput(userInput:String) {      //input will be url or "q" to quit
-
+  var requestStatus = false
 
   if (userInput == "q") System.out.println("Exiting Application")
+
+
   var r = requests.get(userInput)
-  var requestStatus = false
 
   //method for api get request
   def executeRequest()={
@@ -23,10 +24,9 @@ class getInput(userInput:String) {      //input will be url or "q" to quit
     println(r.headers)
     println(" ")
     println(data(0))
-
   }
-
 }
+
 //main
 object Main{
   def main(args: Array[String]) = {
@@ -41,8 +41,9 @@ object Main{
       println(" ")
       if (obj.requestStatus == true) {
         obj.out()
-      } else
+      } else {
         println("There is an error with your request please try again")
+      }
     }
   }
 }
