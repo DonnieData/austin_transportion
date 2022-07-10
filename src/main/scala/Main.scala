@@ -1,16 +1,21 @@
-
+//class for api get request
 class getInput(userInput:String) {      //input will be url or "q" to quit
 
 
   if (userInput == "q") System.out.println("Exiting Application")
-  val r = requests.get(userInput)
+  var r = requests.get(userInput)
+  var requestStatus = false
 
   //method for api get request
   def executeRequest()={
-    if (r.statusCode == 200)
+    if (r.statusCode == 200) {
       println("Request Successful")
-      else
+      requestStatus = true
+      println(requestStatus)
+    } else {
       println("Request Failed: Please try again")
+      requestStatus = false
+    }
   }
 
   def out(): Unit ={
@@ -18,22 +23,26 @@ class getInput(userInput:String) {      //input will be url or "q" to quit
     println(r.headers)
     println(" ")
     println(data(0))
+
   }
 
 }
-
+//main
 object Main{
   def main(args: Array[String]) = {
 
     var appControl = "run"
     while ( appControl == "run") {
 
-      println("Input URL for request")
+      println("""Input URL for request or "q" to exit """)
       var obj = new getInput(scala.io.StdIn.readLine()) // read in user input as string
       println(" ")
       obj.executeRequest()
       println(" ")
-      obj.out()
+      if (obj.requestStatus == true) {
+        obj.out()
+      } else
+        println("There is an error with your request please try again")
     }
   }
 }
