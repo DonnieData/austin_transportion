@@ -2,13 +2,12 @@
 class getInput(userInput:String) {      //input will be url or "q" to quit
   var requestStatus = false
 
-  if (userInput == "q") System.out.println("Exiting Application")
-
-
-  var r = requests.get(userInput)
+  if (userInput == "q") System.exit(1)
+  //if (userInput == "q") System.out.println("Exiting Application")
 
   //method for api get request
   def executeRequest()={
+    val r = requests.get(userInput)
     if (r.statusCode == 200) {
       println("Request Successful")
       requestStatus = true
@@ -19,12 +18,12 @@ class getInput(userInput:String) {      //input will be url or "q" to quit
     }
   }
 
-  def out(): Unit ={
+  /*def out(): Unit ={
     var data = ujson.read(r.text)
     println(r.headers)
     println(" ")
     println(data(0))
-  }
+  }*/
 }
 
 //main
@@ -39,11 +38,11 @@ object Main{
       println(" ")
       obj.executeRequest()
       println(" ")
-      if (obj.requestStatus == true) {
+      /*if (obj.requestStatus == true) {
         obj.out()
       } else {
         println("There is an error with your request please try again")
-      }
+      }*/
     }
   }
 }
