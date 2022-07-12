@@ -2,8 +2,7 @@
 class getInput(userInput:String) {      //input will be url or "q" to quit
   var requestStatus = false
 
-  if (userInput == "q") System.exit(1)
-  //if (userInput == "q") System.out.println("Exiting Application")
+  if (userInput == "q") (println("-----------\nExiting Application\n----------- "), System.exit(1))
 
   //method for api get request
   def executeRequest()={
