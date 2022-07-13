@@ -11,3 +11,7 @@ libraryDependencies ++= Seq(
   "com.lihaoyi" %% "requests" % "0.7.0",
   "com.lihaoyi" %% "upickle" % "1.6.0"
 )
+
+githubOwner := "DonnieData"
+githubRepository := "<github_repo_name>"
+githubTokenSource := TokenSource.GitConfig("github.token")
