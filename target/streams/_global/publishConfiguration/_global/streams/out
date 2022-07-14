@@ -1,0 +1,3 @@
+[0m[[0m[0mdebug[0m] [0m[0mwriting Ivy file C:\Users\Donne\OneDrive\Data Engineering\gitprojects\austin_transportion\target\scala-2.13\resolution-cache\austin_transport_api\austin_transport_api_2.13\0.1.0-SNAPSHOT\resolved.xml.xml[0m
+[0m[[0m[33mwarn[0m] [0m[0mversionScheme setting is empty; set `ThisBuild / versionScheme := Some("early-semver")`, `Some("semver-spec")` or `Some("pvp")`[0m
+[0m[[0m[33mwarn[0m] [0m[0mso tooling can use it for eviction errors etc - https://www.scala-sbt.org/1.x/docs/Publishing.html[0m

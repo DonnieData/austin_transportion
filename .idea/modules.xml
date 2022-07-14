@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/austin_transport_api.iml" filepath="$PROJECT_DIR$/.idea/modules/austin_transport_api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/austin_transport_api-build.iml" filepath="$PROJECT_DIR$/.idea/modules/austin_transport_api-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scala_api_app.iml" filepath="$PROJECT_DIR$/.idea/modules/scala_api_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scala_api_app-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scala_api_app-build.iml" />
     </modules>
   </component>
 </project>

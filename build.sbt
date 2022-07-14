@@ -4,7 +4,7 @@ ThisBuild / scalaVersion := "2.13.8"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "austin_transport_api"
+    name := "scala_api_app"
   )
 
 libraryDependencies ++= Seq(
@@ -13,5 +13,5 @@ libraryDependencies ++= Seq(
 )
 
 githubOwner := "DonnieData"
-githubRepository := "<github_repo_name>"
+githubRepository := "scala-api-app"
 githubTokenSource := TokenSource.GitConfig("github.token")
