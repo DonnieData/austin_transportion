@@ -12,6 +12,7 @@ libraryDependencies ++= Seq(
   "com.lihaoyi" %% "upickle" % "1.6.0"
 )
 
+organization := "DonnieData"
 githubOwner := "DonnieData"
 githubRepository := "scala-api-app"
 githubTokenSource := TokenSource.GitConfig("github.token")
