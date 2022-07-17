@@ -14,7 +14,7 @@ class getInput(userInput: String) { //input will be url or "q" to quit
 
 
   //method for api get request
-  def executeRequest() = {
+  def executeRequest(): Unit = {
     try {
       var r = requests.get(inputString)
       if (r.statusCode == 200) {
@@ -25,7 +25,7 @@ class getInput(userInput: String) { //input will be url or "q" to quit
         requestStatus = false
       }
     }
-    catch {case _: Throwable => (println("Request Failed: Please try again"),System.exit(1))}
+    catch {case _: Throwable => println("Request Failed: Please try again")}
 
   }
   /*def out(): Unit ={
